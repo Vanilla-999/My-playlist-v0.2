@@ -1,0 +1,144 @@
+* ==========================================
+   1. СБРОС СТИЛЕЙ
+   ========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ 
+/* ==========================================
+   2. ФОН СТРАНИЦЫ
+   ========================================== */
+body {
+    background-color: #121212;
+    color: white;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    padding: 20px;
+    min-height: 100vh;
+}
+ 
+/* ==========================================
+   3. ШАПКА
+   ========================================== */
+header {
+    text-align: center;
+    padding: 30px 20px;
+    margin-bottom: 40px;
+}
+ 
+header h1 {
+    font-size: 3rem;
+    letter-spacing: 2px;
+    background: linear-gradient(135deg, #1db954, #1ed760);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+ 
+/* ==========================================
+   4. КОНТЕЙНЕР ДЛЯ КАРТОЧЕК
+   ========================================== */
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+ 
+/* ==========================================
+   5. КАРТОЧКА (section > article)
+   ========================================== */
+section {
+    width: 280px;
+}
+ 
+section article {
+    background: #1e1e1e;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    height: 100%;
+}
+ 
+section article:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.5);
+    background: #252525;
+}
+ 
+/* ==========================================
+   6. КАРТИНКА ОБЛОЖКИ
+   ========================================== */
+section img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 15px auto;
+    display: block;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+ 
+/* ==========================================
+   7. НАЗВАНИЕ ТРЕКА
+   ========================================== */
+section h2 {
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+    color: #fff;
+}
+ 
+/* ==========================================
+   8. ИСПОЛНИТЕЛЬ
+   ========================================== */
+section p {
+    color: #b3b3b3;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+ 
+/* ==========================================
+   9. КНОПКА PLAY (теперь это <a>, не <button>)
+   ========================================== */
+.play-btn {
+    display: inline-block;
+    background: #1db954;
+    color: #000;
+    text-decoration: none;
+    padding: 10px 35px;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+    letter-spacing: 1px;
+}
+ 
+.play-btn:hover {
+    background: #1ed760;
+    transform: scale(1.08);
+    box-shadow: 0 4px 15px rgba(29, 185, 84, 0.4);
+}
+ 
+.play-btn:active {
+    transform: scale(0.95);
+}
+ 
+/* ==========================================
+   10. АДАПТИВ
+   ========================================== */
+@media (max-width: 700px) {
+    header h1 {
+        font-size: 2rem;
+    }
+ 
+    section {
+        width: 100%;
+        max-width: 350px;
+    }
+}
